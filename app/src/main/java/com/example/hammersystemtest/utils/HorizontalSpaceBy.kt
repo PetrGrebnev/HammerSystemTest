@@ -1,0 +1,24 @@
+package com.example.hammersystemtest.utils
+
+import android.graphics.Rect
+import android.view.View
+import androidx.recyclerview.widget.RecyclerView
+
+//Отсутыпы для ресайклера
+
+class HorizontalSpaceBy():RecyclerView.ItemDecoration() {
+//    private var horizontalSpaceWidth = Int
+//
+//    fun VerticalSpaceItemDecoration(horizontalSpaceWidth: Int) {
+//        horizontalSpaceWidth = horizontalSpaceWidth
+//    }
+//
+//    override fun getItemOffsets(
+//        outRect: Rect,
+//        view: View,
+//        parent: RecyclerView,
+//        state: RecyclerView.State
+//    ) {
+//        outRect.right = horizontalSpaceWidth
+//    }
+}

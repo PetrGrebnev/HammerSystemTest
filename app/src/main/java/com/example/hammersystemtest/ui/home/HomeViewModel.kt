@@ -35,15 +35,15 @@ class HomeViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             val response = repository.getAllProduct()
             if (response.isSuccessful) {
+                repository.cleanDatabase()
                 val dataProduct = response.body()
                 if (dataProduct != null) {
                     dataProduct.Result.forEach { item ->
                         val food = repository.mapper(item)
-                        repository.cleanDatabase()
-                        repository.setSaveData(food)
                         list.add(food)
                     }
                 }
+                repository.setSaveData(list)
                 _dataNetwork.postValue(ResultState.Success(list))
             } else {
                 _dataNetwork.postValue(ResultState.Error(RuntimeException("Response body null")))

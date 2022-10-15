@@ -9,7 +9,7 @@ import com.example.hammersystemtest.data.database.Food
 interface FoodDao {
 
     @Insert
-    fun setSaveData(food: Food)
+    fun setSaveData(food: List<Food>)
 
     @Query("SELECT * FROM list_food")
     fun getFood(): List<Food>

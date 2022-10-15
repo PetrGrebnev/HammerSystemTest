@@ -11,7 +11,7 @@ class Repository @Inject constructor(
 
     suspend fun getAllProduct() = network.getAllProduct()
 
-    suspend fun setSaveData(food: Food) {
+    suspend fun setSaveData(food: List<Food>) {
         dao.setSaveData(food)
     }
 
